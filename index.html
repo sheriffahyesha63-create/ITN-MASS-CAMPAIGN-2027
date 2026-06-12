@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>ITN MASS CAMPAIGN @2026</title>
 
 <style>
@@ -38,21 +38,20 @@ header{
         var(--plasma3),
         var(--plasma4)
     );
+    padding:12px;
     box-shadow:0 4px 15px rgba(0,0,0,0.15);
-    padding:20px 30px;
 }
 
 .header-container{
-    max-width:1400px;
-    margin:auto;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
+    gap:10px;
 }
 
 .left-logo img{
-    width:90px;
-    height:90px;
+    width:60px;
+    height:60px;
     object-fit:contain;
 }
 
@@ -63,17 +62,17 @@ header{
 }
 
 .center-title h1{
-    font-size:2.2rem;
+    font-size:1rem;
     font-weight:700;
     text-transform:uppercase;
-    letter-spacing:1px;
+    line-height:1.3;
 }
 
 .center-title .line{
-    width:120px;
-    height:4px;
+    width:70px;
+    height:3px;
     background:var(--plasma6);
-    margin:12px auto;
+    margin:8px auto;
     border-radius:20px;
 }
 
@@ -83,117 +82,97 @@ header{
 }
 
 .right-logo img{
-    width:90px;
-    height:90px;
+    width:60px;
+    height:60px;
     object-fit:contain;
 }
 
 .right-logo h3{
-    margin-top:8px;
-    font-size:0.95rem;
+    margin-top:5px;
+    font-size:0.60rem;
     font-weight:700;
-    text-transform:uppercase;
+    line-height:1.2;
 }
 
 /* BODY */
 main{
     flex:1;
-    background:#ffffff;
-    padding:40px 20px 60px;
+    padding:20px 12px 30px;
 }
 
 .partners-section{
     width:100%;
-    max-width:1100px;
-    margin:auto;
 }
 
 .partners-title{
     text-align:center;
     color:var(--plasma2);
-    font-size:1.8rem;
+    font-size:1.2rem;
     font-weight:700;
-    letter-spacing:4px;
-    margin-bottom:30px;
+    letter-spacing:2px;
+    margin-bottom:15px;
 }
 
 .partners-wrapper{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:20px;
+    gap:10px;
     flex-wrap:wrap;
 }
 
 .partner-tab{
-    width:120px;
-    height:120px;
-    background:#ffffff;
+    width:75px;
+    height:75px;
+    background:#fff;
     border:2px solid #e5e7eb;
-    border-radius:18px;
+    border-radius:15px;
     display:flex;
     justify-content:center;
     align-items:center;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    transition:0.3s ease;
-}
-
-.partner-tab:hover{
-    transform:translateY(-5px);
-    border-color:var(--plasma3);
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 .partner-tab img{
-    width:75px;
-    height:75px;
+    width:45px;
+    height:45px;
     object-fit:contain;
 }
 
 .campaign-image{
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
+    margin-top:20px;
 }
 
 .campaign-image img{
     width:100%;
-    max-width:650px;
-    height:auto;
-    border-radius:20px;
-    border:4px solid #f3f4f6;
-    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    border-radius:15px;
+    border:3px solid #f3f4f6;
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
 }
 
-/* MENU TABS */
+/* MENU */
 .menu-tabs{
-    margin-top:45px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
 .menu-tab{
-    min-width:170px;
-    padding:16px 22px;
-    text-align:center;
     text-decoration:none;
     color:#fff;
-    font-weight:600;
+    text-align:center;
+    padding:14px 10px;
     border-radius:14px;
+    font-size:0.85rem;
+    font-weight:600;
     background:linear-gradient(
         135deg,
         var(--plasma1),
         var(--plasma2),
         var(--plasma3)
     );
-    box-shadow:0 8px 20px rgba(106,0,168,0.25);
-    transition:all 0.3s ease;
-}
-
-.menu-tab:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(106,0,168,0.35);
+    box-shadow:0 6px 15px rgba(106,0,168,0.25);
 }
 
 .menu-tab:nth-child(5),
@@ -217,48 +196,57 @@ footer{
     );
     color:#fff;
     text-align:center;
-    padding:18px;
-    font-size:1rem;
+    padding:14px;
+    font-size:0.85rem;
     font-weight:600;
-    letter-spacing:2px;
-    box-shadow:0 -4px 15px rgba(0,0,0,0.15);
+    letter-spacing:1px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+@media (min-width:768px){
 
     .header-container{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .center-title h1{
-        font-size:1.5rem;
+        max-width:1200px;
+        margin:auto;
     }
 
     .left-logo img,
     .right-logo img{
-        width:70px;
-        height:70px;
+        width:90px;
+        height:90px;
+    }
+
+    .center-title h1{
+        font-size:2rem;
+    }
+
+    .right-logo h3{
+        font-size:0.9rem;
+    }
+
+    .partners-wrapper{
+        gap:20px;
     }
 
     .partner-tab{
-        width:95px;
-        height:95px;
+        width:120px;
+        height:120px;
     }
 
     .partner-tab img{
-        width:55px;
-        height:55px;
+        width:75px;
+        height:75px;
     }
 
     .campaign-image img{
-        max-width:100%;
+        max-width:650px;
+        display:block;
+        margin:auto;
     }
 
-    .menu-tab{
-        min-width:140px;
-        font-size:0.9rem;
+    .menu-tabs{
+        grid-template-columns:repeat(3,1fr);
+        max-width:900px;
+        margin:35px auto 0;
     }
 }
 </style>
@@ -271,7 +259,7 @@ footer{
     <div class="header-container">
 
         <div class="left-logo">
-            <img src="ICF.logo.png" alt="ICF Logo">
+            <img src="ICF.png" alt="ICF Logo">
         </div>
 
         <div class="center-title">
@@ -280,7 +268,7 @@ footer{
         </div>
 
         <div class="right-logo">
-            <img src="NMCP.logo.png" alt="NMCP Logo">
+            <img src="NMCP.png" alt="NMCP Logo">
             <h3>ITN MASS CAMPAIGN @2026</h3>
         </div>
 
@@ -299,19 +287,19 @@ footer{
         <div class="partners-wrapper">
 
             <div class="partner-tab">
-                <img src="WHO.logo.png" alt="WHO Logo">
+                <img src="WHO.png" alt="WHO">
             </div>
 
             <div class="partner-tab">
-                <img src="THE GLOBAL FUND.logo.png" alt="The Global Fund Logo">
+                <img src="THE GLOBAL FUND.png" alt="The Global Fund">
             </div>
 
             <div class="partner-tab">
-                <img src="UNICEF.logo.png" alt="UNICEF Logo">
+                <img src="UNICEF.png" alt="UNICEF">
             </div>
 
             <div class="partner-tab">
-                <img src="USAID.logo.png" alt="USAID Logo">
+                <img src="USAID.png" alt="USAID">
             </div>
 
         </div>
